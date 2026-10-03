@@ -4,8 +4,8 @@ class Solution:
         dup = False
         for x in range(len(nums)):
             if nums[x] in numbers:
-                dup = True
+                return True
             else:
                 numbers.add(nums[x]) 
 
-        return dup
+        return False
