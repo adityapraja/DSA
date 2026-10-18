@@ -1,11 +1,15 @@
 class Solution:
     def intersection(self, nums1: list[int], nums2: list[int]) -> list[int]:
-        inter = set()
+        unique = set()
+        intersec = list()
+        added = set()
+        for i in range(len(nums1)):
+            if nums1[i] not in unique:
+                unique.add(nums1[i])
 
-        for i in range(0,len(nums1)):
-            for j in range(0,len(nums2)):
-                if nums1[i] == nums2[j] and nums1[i] not in inter:
-                    inter.add(nums1[i])
-
-        
-        return list(inter)
+        for i in range(len(nums2)):
+            if nums2[i] in unique and nums2[i] not in added:
+                intersec.append(nums2[i])
+                added.add(nums2[i])
+                    
+        return intersec
