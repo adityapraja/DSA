@@ -8,11 +8,7 @@ class Solution:
                 if not char:
                     return False
                 top = char.pop()
-                if s[i] ==')' and top!= '(':
-                    return False
-                if s[i] =='}' and top!= '{':
-                    return False
-                if s[i] ==']' and top!= '[':
+                if (s[i] ==')' and top!= '(') or (s[i] =='}' and top!= '{') or (s[i] ==']' and top!= '['):
                     return False
 
         return len(char) == 0
