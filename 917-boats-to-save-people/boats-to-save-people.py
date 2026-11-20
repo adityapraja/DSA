@@ -11,8 +11,7 @@ class Solution:
                 right-=1
             else:
                 right-=1
-            
-            boat+=1
-        
 
+            boat+=1
+    
         return boat
