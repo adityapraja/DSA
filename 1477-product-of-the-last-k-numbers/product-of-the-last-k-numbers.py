@@ -15,11 +15,6 @@ class ProductOfNumbers:
             return 0
         return self.prod[-1] // self.prod[-1-k]
 
-        for i in range(len(self.prod)-1,len(self.prod) -k-1,-1):
-            mul*=self.prod[i]
-        
-        return mul
-
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
